@@ -1,43 +1,44 @@
 const lista = document.querySelector('.pokemons');
-const botaoAdicionaPokemon = document.querySelector('.botao');
+const botaoAdicionaPokemon = document.querySelector('.load-more');
 
-var offset = 0;
+const maxRecords = 151;
+const limit = 10;
+let offset = 0;
 
-inserePokemons();
+inserePokemons(offset, limit);
 
-botaoAdicionaPokemon.addEventListener('click', () => {    
-    offset += 10;
-    var limit = 10;
-    inserePokemons (offset, limit);
+botaoAdicionaPokemon.addEventListener('click', () => {
+    offset += limit;
+
+    const qtdRecords = offset + limit;
+
+    if(qtdRecords >= maxRecords) {
+        const newLimit = maxRecords - offset;
+        inserePokemons(offset, newLimit);
+
+        botaoAdicionaPokemon.parentElement.removeChild(botaoAdicionaPokemon);
+    } else{
+        inserePokemons(offset, limit);
+    }
+    
 });
 
 function inserePokemons(offset, limit) {
     pokeApi.getPokemons(offset, limit).then(pokemons => {
-        const listaDePokemons = pokemons.map(criaListaDePokemons).join('');        
+        const listaDePokemons = pokemons.map(criaListaDePokemons).join('');
         lista.innerHTML += listaDePokemons;
-    });    
+    });
 }
 
-
 function criaListaDePokemons(pokemon) {
-    let segundoAtributo;
-
-    //condicional para os pokemons com apenas 1 atributo, limpar no html o segundo atributo
-    if (!pokemon.types[1]) {
-        segundoAtributo = "<li class=li-none></li>";
-    } else {
-        segundoAtributo = `<li class='${pokemon.types[0].type.name}'>${pokemon.types[1].type.name}</li>`;
-    }
-
-    return `<li class="pokemon ${pokemon.types[0].type.name}">
+    return `<li class="pokemon ${pokemon.type}">
     <span class="pokemon-number">#${pokemon.id}</span>
     <span class="pokemon-name">${pokemon.name}</span>
     <div class="pokemon-detail">
         <ol class="pokemon-type">
-            <li class = "${pokemon.types[0].type.name}">${pokemon.types[0].type.name}</li>
-            ${segundoAtributo}
+            ${pokemon.types.map(type => `<li class = "${type}">${type}</li>`).join('')}
         </ol>
-        <img src="${pokemon.sprites.other.dream_world.front_default}"
+        <img src="${pokemon.imagem}"
         alt="${pokemon.name}">
     </div>    
     </li>`;
