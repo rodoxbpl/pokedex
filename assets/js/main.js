@@ -1,5 +1,10 @@
 const lista = document.querySelector('.pokemons');
+const pokeId = document.querySelector('.pokemon-number');
 const botaoAdicionaPokemon = document.querySelector('.load-more');
+
+const liPokemon = document.querySelector('.poke-detail');
+
+let id = null;
 
 const maxRecords = 151;
 const limit = 10;
@@ -15,7 +20,7 @@ botaoAdicionaPokemon.addEventListener('click', () => {
     if(qtdRecords >= maxRecords) {
         const newLimit = maxRecords - offset;
         inserePokemons(offset, newLimit);
-
+        
         botaoAdicionaPokemon.parentElement.removeChild(botaoAdicionaPokemon);
     } else{
         inserePokemons(offset, limit);
@@ -31,7 +36,8 @@ function inserePokemons(offset, limit) {
 }
 
 function criaListaDePokemons(pokemon) {
-    return `<li class="pokemon ${pokemon.type}">
+    
+    return `<a class="poke-detail" href="poke-detail.html?id=${pokemon.id}"><li id="li-poke" class="pokemon ${pokemon.type}">
     <span class="pokemon-number">#${pokemon.id}</span>
     <span class="pokemon-name">${pokemon.name}</span>
     <div class="pokemon-detail">
@@ -41,5 +47,5 @@ function criaListaDePokemons(pokemon) {
         <img src="${pokemon.imagem}"
         alt="${pokemon.name}">
     </div>    
-    </li>`;
+    </li></a>`;
 }

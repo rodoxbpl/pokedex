@@ -1,10 +1,11 @@
 <h1>Pokedex<img src="pikachu.png" width="50px" heigth="50px"></h1>
 
-<h2>Projeto de criação de uma pokedex consumindo a api Pokeapi</h2>
+<h2>Projeto de criação de uma pokedex consumindo a api Pokeapi com javascript para carregar dinâmicamente os cards dos pokemons, além da exibição em uma nova tela das informações detalhadas do pokmenon selecionado.</h2>
 
 <h3>Linguagens utilizadas HTML5, CSS e JavaScript</h3>
 
 ## [Veja o resultado Aqui](https://pokedex-v75bqebar-rodoxbpl.vercel.app/)
+
 
 
 

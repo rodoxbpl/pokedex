@@ -1,0 +1,310 @@
+body {
+    background: #dde2ec;
+}
+
+.content-principal {
+    padding: 1rem;
+    width: 100vw;
+    margin: 0 auto;
+}
+
+.secao-pokemon {
+    display: flex;
+    flex-direction: column;
+}
+
+.pokemon-texto {
+    display: flex;
+    align-items: center;
+    margin: 0.625rem;
+    justify-content: space-between;
+}
+
+.pokemon-name {
+    color: #fff;
+    text-transform: capitalize;
+    font-size: 2rem;
+}
+
+.pokemon-id {
+    text-align: right;
+    align-self: flex-end;
+    color: #fff;
+    opacity: 1rem;
+    font-size: 1.25rem;
+}
+
+.pokemon-detail {
+    margin-top: .5rem;
+}
+
+.pokemon-type {    
+    display: flex;
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    border-radius: 1rem;
+}
+
+.pokemon-type li {
+    margin: .25rem .25rem;
+    border-radius: 1rem;
+    padding: .3rem .5rem;
+    color: #000;
+    width: auto;
+    font-size: 1rem;
+    text-transform: capitalize;
+    filter: brightness(1.2);
+}
+
+.pokemon-img {
+    align-self: center;
+    max-width: 40%;
+}
+
+.content-secundario {
+    padding: 1rem;
+    width: 100vw;
+    height: 100vh;
+    margin: 0 auto;
+}
+
+.secao-atributos {
+    display: flex;
+    flex-direction: column;
+    background-color: #fff;
+    border-radius: 1rem;
+    margin-top: -2.8rem;
+}
+
+.pokemons {
+    margin: 0;
+    padding: 1rem;
+    display: flex;
+    flex-direction: column;
+    list-style: none;
+    gap: 1rem;
+}
+
+.pokemons p {
+    margin: 0;
+    font-weight: bold;
+}
+
+.pokemons li {
+    margin: 0;
+    padding: 0;
+    text-transform: capitalize;
+}
+
+.pokemons-atributos {
+    display: flex;
+    gap: 1rem;
+    justify-content: center;
+    align-items: center;
+    font-size: 1.5rem;
+}
+
+.status {
+    display: flex;
+    align-self: center;
+    padding: 0;
+    list-style: none;
+    gap: 0.325rem;
+}
+
+.status li {
+    padding-top: .5rem;
+    border-radius: .5rem;
+    width: 58px;
+    height: 49px;
+    text-align: center;
+    font-size: .7rem;
+}
+
+.status p {
+    font-size: .5rem;
+}
+
+.status li:nth-of-type(1) {
+    background-color: #FF5959;
+}
+.status li:nth-of-type(2) {
+    background-color: #f5ac78;
+}
+.status li:nth-of-type(3) {
+    background-color: #fae078;
+}
+.status li:nth-of-type(4) {
+    background-color: #9db7f5;
+}
+.status li:nth-of-type(5) {
+    background-color: #FF5959;
+}
+.status li:nth-of-type(6) {
+    background-color: #fa92b2;
+}
+
+.bug {
+    background-color: #a1a41f;
+}
+
+.dark {
+    background-color: #484848;
+}
+
+.dragon {
+    background-color: #5363d3;
+}
+
+.electric {
+    background-color: #fcdb00;
+}
+
+.fairy {
+    background-color: #fab1fc;
+}
+
+.fighting {
+    background-color: #fea401;
+}
+
+.fire {
+    background-color: #fc6232;
+}
+
+.flying {
+    background-color: #97cafd;
+}
+
+.ghost {
+    background-color: #6c4272;
+}
+
+.grass {
+    background-color: #3fc027;
+}
+
+.ground {
+    background-color: #aa783e;
+}
+
+.ice {
+    background-color: #3fdbfc;
+}
+
+.normal {
+    background-color: #999999;
+}
+
+.poison {
+    background-color: #9951cd;
+}
+
+.psychic {
+    background-color: #fe617d;
+}
+
+.rock {
+    background-color: #bbba88;
+}
+
+.steel {
+    background-color: #69b1d7;
+}
+
+.water {
+    background-color: #2f91ff;
+}
+
+@media screen and (min-width: 576px) { 
+    .secao-pokemon {
+        padding: 2rem 2rem 0 2rem;
+    }
+
+    .pokemon-name {
+        font-size: 2.5rem;
+    }
+
+    .pokemon-id {
+        font-size: 1.75rem;
+    }
+
+    .pokemon-type li{
+        font-size: 1.5rem;
+    }
+    .status {
+        gap: 0.625rem;
+    }
+
+    .status li {
+        width: 50px;
+        height: 50px;
+        font-size: 1rem;
+    }   
+    .content-principal {
+        width: 60vw;
+    }
+
+    .content-secundario {
+        width: 60vw;
+    }
+
+    
+}
+
+@media screen and (min-width: 992px) {
+    
+    .pokemon-name {
+        font-size: 3rem;
+    }
+
+    .pokemon-id {
+        font-size: 2.25rem;
+    }
+
+    .pokemon-type li{
+        font-size: 2rem;
+    }
+
+    .pokemons-atributos {
+        font-size: 3rem;
+    }
+
+    .status {
+        gap: 2rem;
+    }
+
+    .status li {
+        width: 80px;
+        height: 79px;
+        font-size: 2rem;
+    }
+
+    .status li p{
+        font-size: 1rem;
+    }
+
+    .pokemons p {
+        font-size: 1.5rem;
+    }
+
+    .pokemons p li {
+        font-size: 1.5rem;
+    }
+
+    .content-principal {
+        width: 80vw;
+    }
+
+    .content-secundario {
+        width: 80vw;
+    }
+}
+
+
+
+
+
+
+
