@@ -7,7 +7,7 @@ window.addEventListener('load', () => {
 
     pokeApi.getPokemon(pokeid).then(pokemon => {
         const dadosPrincipaisdoPokemon = insereDadosPokemonHtml(pokemon);
-        const dadosDoPokemon = criaDetalhesDoPokemon(pokemon);
+        const dadosDoPokemon = insereAtributosDosPokemons(pokemon);
         listaPrincipal.innerHTML = dadosPrincipaisdoPokemon;
         listaAtributos.innerHTML = dadosDoPokemon;
 
@@ -42,16 +42,16 @@ function insereDadosPokemonHtml(pokemon) {
     `;
 }
 
-function criaDetalhesDoPokemon(pokemon) {
+function insereAtributosDosPokemons(pokemon) {
     return ` 
     <div class="secao-atributos">
-        <ol class="pokemons">
+        <ol class="atributos">
             <div class="pokemons-atributos">
                 <li>Height: ${pokemon.height}ft</li>
                 <li>Weight: ${pokemon.weight}lb</li>
             </div>
             <ol class="status">${pokemon.stats.map(status => `<li>${status.base_stat} <p>${status.stat.name}</p></li>`).join('')}</ol>
-            <p>Abilities:</p>${pokemon.abilities.map(ability => `<li>${ability}`).join('')}</li>
+            <p>Abilities:</p>${pokemon.abilities.map(ability => `<li class="habilidades">${ability}`).join('')}</li>
         </ol>
     </div>`;
 }
