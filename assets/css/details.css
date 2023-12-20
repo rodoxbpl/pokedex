@@ -288,79 +288,79 @@ body {
     }
     
     .pokemon-name {
-        font-size: 3rem;
+        font-size: 1.5rem;
     }
 
     .pokemon-id {
-        font-size: 2.25rem;
-    }
-
-    .pokemon-type li{
-        font-size: 2rem;
-    }
-
-    .pokemons-atributos {
-        font-size: 3rem;
-    }
-
-    .status {
-        gap: 2rem;
-    }
-
-    .status li {
-        width: 80px;
-        height: 79px;
-        font-size: 2rem;
-    }
-
-    .status li p{
         font-size: 1rem;
     }
 
-    .atributos p {
-        font-size: 1.5rem;
-    }
-
-    .habilidades {
-        font-size: 1.5rem;
-    }
-
-    .content-principal {
-        width: 80vw;
-    }
-
-    .content-secundario {
-        width: 80vw;
-    }
-}
-
-@media screen and (min-width: 1200px) {
-    .pokemon-name {
-        font-size: 3.5rem;
-    }
-
-    .pokemon-id {
-        font-size: 2.5rem;
-    }
-
     .pokemon-type li{
-        font-size: 2.5rem;
+        font-size: 1rem;
     }
 
     .pokemons-atributos {
-        font-size: 3.5rem;
+        font-size: 2rem;
+    }
+   
+    .status {
+        gap: 1rem;
+    }
+
+    .status li {
+        width: 58px;
+        height: 59px;
+        font-size: 1rem;
+    }
+
+    .status li p{
+        font-size: .7rem;
     }
 
     .atributos p {
-        font-size: 2rem;
-        font-weight: 700;
+        font-size: 1.5rem;
     }
 
     .habilidades {
-        font-size: 2rem;
-        font-weight: 400;
+        font-size: 1.5rem;
+        font-weight: 500;
+    }
+    .content-principal {
+        width: 50vw;
+    }
+
+    .content-secundario {
+        width: 50vw;
+    }
+}
+
+@media screen and (min-width: 1200px) {   
+
+    .content-principal {
+        width: 40vw;
+    }
+
+    .content-secundario {
+        width: 40vw;
+        height: 40vh;
     }
     
+}
+
+@media screen and (min-width: 1440px) {
+    .content-principal {
+        width: 40vw;
+        height: 50vh;
+    }
+
+    .content-secundario {
+        width: 40vw;
+        height: 30vh;
+    }
+
+    .atributos {
+        padding-top: 2rem;
+    }
 }
 
 
