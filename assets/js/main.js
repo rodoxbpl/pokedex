@@ -10,6 +10,7 @@ const maxRecords = 151;
 const limit = 10;
 let offset = 0;
 
+
 inserePokemons(offset, limit);
 
 botaoAdicionaPokemon.addEventListener('click', () => {
@@ -36,7 +37,7 @@ function inserePokemons(offset, limit) {
 }
 
 function criaListaDePokemons(pokemon) {
-    
+    id = pokemon.id;
     return `<a class="poke-detail" href="poke-detail.html?id=${pokemon.id}"><li id="li-poke" class="pokemon ${pokemon.type}">
     <span class="pokemon-number">#${pokemon.id}</span>
     <span class="pokemon-name">${pokemon.name}</span>

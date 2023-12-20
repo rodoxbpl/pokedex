@@ -1,29 +1,20 @@
 const listaAtributos = document.querySelector('.content-secundario');
 const listaPrincipal = document.querySelector('.content-principal');
 
-window.addEventListener('load', () => {
+pegaDados();
 
+function pegaDados() {
     const [_, pokeid] = window.location.search.split("=");
 
     pokeApi.getPokemon(pokeid).then(pokemon => {
-        const dadosPrincipaisdoPokemon = insereDadosPokemonHtml(pokemon);
-        const dadosDoPokemon = insereAtributosDosPokemons(pokemon);
+        const dadosPrincipaisdoPokemon = insereDadosDoPokemon(pokemon);
+        const dadosDoPokemon = insereAtributosDoPokemon(pokemon);
         listaPrincipal.innerHTML = dadosPrincipaisdoPokemon;
         listaAtributos.innerHTML = dadosDoPokemon;
-
     });
-});
+}
 
-window.addEventListener('popstate', () => {
-    const [_, pokeid] = window.location.search.split("=");
-    pokeApi.getPokemon(pokeid).then(pokemon => {
-        const dadosDoPokemon = criaDetalhesDoPokemon(pokemon);
-        listaAtributos.innerHTML = dadosDoPokemon;
-
-    });
-});
-
-function insereDadosPokemonHtml(pokemon) {
+function insereDadosDoPokemon(pokemon) {
     return `
     <div class="secao-pokemon ${pokemon.type}">
         <div class="pokemon-texto">
@@ -42,7 +33,7 @@ function insereDadosPokemonHtml(pokemon) {
     `;
 }
 
-function insereAtributosDosPokemons(pokemon) {
+function insereAtributosDoPokemon(pokemon) {
     return ` 
     <div class="secao-atributos">
         <ol class="atributos">
