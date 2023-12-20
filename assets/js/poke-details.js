@@ -17,6 +17,7 @@ function pegaDados() {
 function insereDadosDoPokemon(pokemon) {
     return `
     <div class="secao-pokemon ${pokemon.type}">
+        <button type="button" class="back"><img src="/assets/img/arrow.png" width="50" height="30" onclick="window.history.back();"></button>
         <div class="pokemon-texto">
             <span class="pokemon-name">${pokemon.name}</span>
             <span class="pokemon-id">#${pokemon.id}</span>

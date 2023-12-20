@@ -11,6 +11,12 @@ body {
 .secao-pokemon {
     display: flex;
     flex-direction: column;
+    border-top-right-radius: 1rem;
+    border-top-left-radius: 1rem;
+}
+
+.back {
+    display: none;
 }
 
 .pokemon-texto {
@@ -260,17 +266,26 @@ body {
         height: 50px;
     }   
     .content-principal {
-        width: 60vw;
+        width: 70vw;
     }
 
     .content-secundario {
-        width: 60vw;
+        width: 70vw;
     }
 
     
 }
 
 @media screen and (min-width: 992px) {
+
+    .back {
+        display: block;
+        width: 60px;
+        height: 30px;
+        margin: .625rem;
+        background: none;
+        border: none;
+    }
     
     .pokemon-name {
         font-size: 3rem;
