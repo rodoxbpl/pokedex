@@ -1,6 +1,6 @@
 <h1>Pokedex<img src="/assets/img/pikachu.png" width="50px" heigth="50px"></h1>
 
-<h2>Projeto de criação de uma pokedex consumindo a api Pokeapi com javascript para carregar dinâmicamente os cards dos pokemons, além da exibição em uma nova tela das informações detalhadas do pokmenon selecionado.</h2>
+<h2>App de uma pokedex consumindo a api Pokeapi com javascript para carregar dinâmicamente os cards dos pokemons, além da exibição em uma nova tela das informações de atributos do pokemon selecionado.</h2>
 
 <h3>Linguagens utilizadas HTML5, CSS e JavaScript</h3>
 
